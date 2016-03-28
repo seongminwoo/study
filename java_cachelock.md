@@ -16,12 +16,17 @@ nginx cache lock 구현 코드 : https://github.com/nginx/nginx/blob/645697f1119
 
 ## 구현체들
 1. 스프링 cache 추상화.
- 동기화 요구사항이 계속 있었음. Spring 4.3에서 sync=true 속성으로 지원.(eX) @Cacheable(cacheNames = "foos", sync = true))
+ 동기화 요구사항이 계속 있었음. Spring 4.3에서 sync=true 속성으로 지원.
+
  https://spring.io/blog/2016/03/04/core-container-refinements-in-spring-framework-4-3#cache-abstraction-refinements
+
  스프링 커밋코드 : https://github.com/spring-projects/spring-framework/commit/19d97c425316801a767cf99178ef30af730b1570
+
 2. EHCache BlockingCache
  BlockingCache Decorators로 cachelock 기능 제공.
+
  http://www.ehcache.org/documentation/2.8/apis/cache-decorators
+ 
  코드 : http://grepcode.com/file/repo1.maven.org/maven2/net.sf.ehcache/ehcache/2.10.0/net/sf/ehcache/constructs/blocking/BlockingCache.java#BlockingCache
 
 ## 문제점
