@@ -3,7 +3,7 @@ nginx cache_lock 기능을 Global API-GATEWAY 프로젝트(java)에 구현하는
 
 ## 고민
 lock 동기화 매커니즘 어떤걸 사용해야하나? 아래 몇가지 동기화 매커니즘들 중 readLock, writeLock 패턴이 가장 적합할거라 생각함.
-nginx cache lock 구현코드를 보면 lock 관련 코드가 내부에 숨겨져 있어서 매커니즘 확인이 어려웠음.
+nginx cache lock 구현코드를 보면 단순히 wait 하면서 timer 걸어서 cache가 write 되었는지 polling 하는 구조로 보임(c 코드를 잘몰라서 확실하지는 않음)
 EHCache에서 제공하는 BlockingCache 구현체 코드를 보면 ReentrantReadWriteLock 사용.
 
 * Guarded Suspension 패턴(or Guarded timed)
