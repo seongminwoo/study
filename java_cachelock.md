@@ -31,7 +31,7 @@ nginx cache lock 구현 코드 : https://github.com/nginx/nginx/blob/645697f1119
 
 ## 해결책
 BlockingCache 코드를 기본으로, 아래 스프링 코드처럼 get메소드 내에서 cache 미존재시 put까지 수행하고 writeLock을 해제하도록 코드 작성함.
-스프링 참고 코드
+스프링 참고 코드 : https://github.com/spring-projects/spring-framework/commit/19d97c425316801a767cf99178ef30af730b1570
 ```
 @SuppressWarnings("unchecked")
 @Override
@@ -61,3 +61,13 @@ public <T> T get(Object key, Callable<T> valueLoader) {
 
 ## 성능테스트
 https://oss.navercorp.com/api-gateway/gpop/issues/224#issuecomment-426905
+
+## 성능테스트 문제점
+* vuser2000 + lock개수 다량(random.nextInt(4096))으로 성능테스트 수행하니 응답속도가 ~8초까지 느려지는 현상 발생.
+* 이유는 lock을 얻는데 오래걸리는 요청들이 생기면서 locktimeout5초 지연.
+* vuser1000->500->250개로 줄여보면 응답시간이 나아지긴하지만 여전히 lock 시간 지연.
+
+## 성능 개선
+* ReentrantReadWriteLock 성능이 느리다는 보고들이 많고, 최근 Java8에서는 ReentrantReadWriteLock을 개선한 StampedLock이 나옴.(http://stackoverflow.com/questions/26087738/performance-of-reentrantreadwritelock-read-lock)
+* Java8 쓰기는 좀 곤란하고 read와 write를 동시에 해도 문제가 없을 경우 readLock을 쓰지 말자는 글 발견.(http://blog.takipi.com/java-8-stampedlocks-vs-readwritelocks-and-synchronized/)
+* 최근 4.4에 커밋된 EhCacheCache 동기화 로직에서 보면 writeLock만 사용확인. 사실 캐시라서 가능하고, EHCache의 경우 오퍼레이션이 thread safe해서 괜찮.(https://github.com/spring-projects/spring-framework/commit/19d97c425316801a767cf99178ef30af730b1570)
