@@ -74,5 +74,5 @@ https://oss.navercorp.com/api-gateway/gpop/issues/224#issuecomment-426905
 
 
 ## 동기화 관련 좋은 레퍼런스
-BankAccount예제 : Synchronized vs Synchronized Volatile vs ReentrantLock vs ReentrantReadWriteLock vs StampedLock 
+BankAccount예제 : Synchronized vs Synchronized Volatile vs ReentrantLock vs ReentrantReadWriteLock vs StampedLock  vs Immutable  vs Atomic
 http://www.javaspecialists.eu/archive/Issue215.html
