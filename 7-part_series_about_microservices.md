@@ -401,7 +401,7 @@ https://aws.amazon.com/lambda/
 * Periodically, according to a cron-like schedule
 
 
-# 6. Refactoring a Monolith into Microservices
+# 7. Refactoring a Monolith into Microservices
 원본 글 : https://www.nginx.com/blog/refactoring-a-monolith-into-microservices/
 
 monolithic 애플리케이션에서 microservices로 점진적으로 migration, refactoring 하는 전략 소개.
