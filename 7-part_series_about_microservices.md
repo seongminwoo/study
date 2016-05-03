@@ -403,3 +403,45 @@ https://aws.amazon.com/lambda/
 
 # 6. Refactoring a Monolith into Microservices
 원본 글 : https://www.nginx.com/blog/refactoring-a-monolith-into-microservices/
+
+monolithic 애플리케이션에서 microservices로 점진적으로 migration, refactoring 하는 전략 소개.
+
+## Overview of Refactoring to Microservices
+* [application modernization](https://en.wikipedia.org/wiki/Software_modernization)
+* "Big Bang” rewrite는 위험하니점진적으로 refactoring 하는 전략을 취해야한다.
+* [Strangler Application](http://www.martinfowler.com/bliki/StranglerApplication.html)
+
+## Strategy 1 – Stop Digging
+신규 기능을 추가해야 할 경우 기존 MONOLITH가 아닌 별도의 신규 SERVICE를 만들어서 연동하라.
+![](https://assets.wp.nginx.com/wp-content/uploads/2016/03/Adding_a_secure_microservice_alongside_a_monolithic_application.png)
+
+신규 SERVICE가 MONOLITH 데이터에 접근하는 3가지 전략으로는 다음과 같다.
+* remote API 호출
+* database 직접 접근
+* database copy(동기화) 
+
+glue code = anti-corruption layer(Eric Evans의 Domain Driven Design 책에서 소개된 패턴 용어.)
+SERVICE로 하여금 MONOLITH와 독립적인 domain 모델 사용가능하게 한다.
+
+MONOLITH의 문제점을 근본적으로 해결하는 방법은 아니다 MONOLITH를 break up 해야되는데 다음에서 그 전략을 설명한다.
+
+## Strategy 2 – Split Frontend and Backend
+![](https://assets.wp.nginx.com/wp-content/uploads/2016/04/Richardson-microservices-part7-refactoring.png)
+
+Frontend와 Backend를 둘로 나눌 경우 아래 2가지 장점이 있지만 역시나 부분적인 솔루션이다.
+
+* 개발, 배포, 확장이 서로 독립적이다. 특히 Frontend 개발자는 빠르게 UI 작업 반복이 가능하고 A/B 테스팅을 쉽게 수행 가능해진다.
+* 자연스럽게 remote API 서버(Backend)가 생성된다.
+
+
+## Strategy 3 – Extract Services
+![](https://assets.wp.nginx.com/wp-content/uploads/2016/04/Richardson-microservices-part7-extract-module.png)
+
+추출(extraction) 전략은 아직 microserivce 경험이 없을 초반에는 추출하기 쉬운 모듈 먼저 진행 하고 그 후에는 이득이 되는 모듈에 우선순위를 두면된다. 이득이 되는 모듈이란 변경이 자주 발생하는 모듈이다. 추출하고 나면 개발, 배포가 독립적으로 이루어질 수 있어서 개발을 가속화 시키기 때문이다. 혹은 자원(CPU, 메모리) 요구사항이 특이한 케이스의 모듈을 대상으로 하는것도 좋다.
+
+* a pair of coarse-grained APIs 정의하기(inbound, outbound interfaces)
+* 모듈을 독립적인 서비스로 전환(IPC 사용). [Microservice Chassis framework](http://microservices.io/patterns/microservice-chassis.html) 사용.
+
+## Summary
+* monolithic 애플리케이션에서 microservices로 전환은 한번에 할수는 없고 점진적으로 진행햐하는데,  3가지 전략이 있다.(new functionality as microservices, split Frontend and Backend, convert modules into services)
+* microservices가 증가함에 따라 개발팀의 기민함(agility)과 속도(velocity)가 증가할 것이다.
