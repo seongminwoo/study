@@ -6,7 +6,7 @@
 원본 글 : https://www.nginx.com/blog/introduction-to-microservices/
 
 ## Building Monolithic Applications
-아래는 Uber같은 taxi-haling app 아키텍쳐 다이어그램이다. [hexagonal architecture](http://www.infoq.com/news/2014/10/exploring-hexagonal-architecture) = Ports and Adapters architecture.
+아래는 Uber같은 taxi-hailing app 아키텍쳐 다이어그램이다. [hexagonal architecture](http://www.infoq.com/news/2014/10/exploring-hexagonal-architecture) = Ports and Adapters architecture.
 ![](https://www.nginx.com/wp-content/uploads/2015/05/Graph-01-e1431978090737.png)
 논리적으로는 모듈형태이지만 단일(monolith) 애플리케이션으로 배포되기 때문에 개발, 테스트, 패키징, 배포 간편하고 쉬운 장점을 갖는다.
 
