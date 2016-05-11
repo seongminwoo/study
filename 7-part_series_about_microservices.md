@@ -2,7 +2,7 @@
 
 [Chris Richardson](http://microservices.io/)이 포스팅하고 있는 "a 7-part series about designing, building, and deploying microservices." 시리즈 글들(총 7개)을 요약해본다.(2016-03-08 연재완료.)
 
-# 1. Introduction to Microservices
+# 1. Introduction to Microservices방화벽
 원본 글 : https://www.nginx.com/blog/introduction-to-microservices/
 
 ## Building Monolithic Applications
@@ -87,10 +87,14 @@ MSA 구조에서는 클라이언트가 접근하는 endpoint가 여러개 존재
 
 ## Benefits and Drawbacks of an API Gateway
 ### Benefits
-* single endpoint(수많은 내부 서버 구조를 숨김). 클라이언트와 서버사이의 round trip 횟수 감소. 클라이언트 코드가 단순해짐.
+* single endpoint(수많은 내부 서버 구조를 숨김).
+* 클라이언트와 서버사이의 round trip 횟수 감소.
+* 클라이언트 코드가 단순해짐.
+* 공통기능(인증, 캐싱, 통계, 프로토콜, 메시지 변환 등) 처리를 대신해줌.
 
 ### Drawbacks
-* 관리 포인트. API Gateway가 개발 병목이 될 수 있다. API 탑재 프로세스(update)가 가벼워야 한다.
+* 관리 포인트. API Gateway가 개발 병목이 될 수 있다.
+* API 탑재 프로세스(update)가 가벼워야 한다.
 
 ## Implementing an API Gateway
 API Gateway 구현시 아래 디자인 이슈를 고려 해야한다.
@@ -119,17 +123,17 @@ language method call VS IPC(inter-process communication)
 ![](https://www.nginx.com/wp-content/uploads/2015/07/Richardson-microservices-part3-monolith-vs-microservices.png)
 
 ## Interaction Styles
-* One-to-one – Each client request is processed by exactly one service instance.
-* One-to-many – Each request is processed by multiple service instances.
-* Synchronous – The client expects a timely response from the service and might even block while it waits.
-* Asynchronous – The client doesn’t block while waiting for a response, and the response, if any, isn’t necessarily sent immediately.
-
 MSA 각 서비스 컴퍼넌트들은 아래 다양한 IPC 방식의 조합을 사용하게 된다.
 
 | | One-to-One | One-to-Many |
 | ------------- |:-------------:| -----:|
 | Synchronous | Request/response | — |
 | Asynchronous | Notification, Request/async response | Publish/subscribe, Publish/async responses |
+
+* One-to-one – Each client request is processed by exactly one service instance.
+* One-to-many – Each request is processed by multiple service instances.
+* Synchronous – The client expects a timely response from the service and might even block while it waits.
+* Asynchronous – The client doesn’t block while waiting for a response, and the response, if any, isn’t necessarily sent immediately.
 
 ex) taxi-hailing(우버) app.
 ![](https://www.nginx.com/wp-content/uploads/2015/07/Richardson-microservices-part3-taxi-service-1024x609.png)
@@ -203,7 +207,7 @@ IDL tools : RAML and Swagger.
 원본 글 : https://www.nginx.com/blog/service-discovery-in-a-microservices-architecture/
 
 ## Why Use Service Discovery?
-cloud-based microservices application - changes dynamically because of auto-scaling, failures, and upgrades.
+클라우드 환경에서의 microservices application은 auto-scaling, 장애, 업그레이드 등으로 인해 다이나믹하게 (IP주소가)변화한다.
 ![](https://www.nginx.com/wp-content/uploads/2015/10/theproblemofdiscovery-1005x1024.png)
 
 ### The Client-Side Discovery Pattern
@@ -240,7 +244,7 @@ highly available system component that need to set up and manage.
 * consul
 * Apache Zookeeper
 
-Kubernetes, Marathon, and AWS 같은 경우 별도의 service registry가 존재하지는 않고 인프라의 일부로 포함되어 있다.
+Kubernetes, Marathon, and AWS의 경우 별도의 service registry가 존재하지 않고 인프라의 일부로 포함되어 있다.
 
 
 ## Service Registration Options
