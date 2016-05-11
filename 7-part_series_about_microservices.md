@@ -1,6 +1,6 @@
 # 개요
 
-[Chris Richardson](http://microservices.io/)이 포스팅하고 있는 "a 7-part series about designing, building, and deploying microservices." 시리즈 글들(총 7개 예정)을 요약해본다.(2016-03-15 기준 총 6개글 연재.)
+[Chris Richardson](http://microservices.io/)이 포스팅하고 있는 "a 7-part series about designing, building, and deploying microservices." 시리즈 글들(총 7개)을 요약해본다.(2016-03-08 연재완료.)
 
 # 1. Introduction to Microservices
 원본 글 : https://www.nginx.com/blog/introduction-to-microservices/
