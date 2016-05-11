@@ -60,7 +60,7 @@
  * Hailo : 160, Netflix : 600 different services, 수많은 서비스 배포하려면 service discovery, 배포 자동화 도구들 필요. DevOps. ex) PaaS 서비스 이용 or 직접 구축(Mesos나 Kubernetes 이용.)
 
 * 팀간의 의사소통 어려움
-* 메모리 소비 증가. NxM services runs in its own JVM. own VM.
+* 메모리 (중복)소비 증가. N x M services runs in its own JVM. own VM.
 
 # 2. Building Microservices: Using an API Gateway
 원본 글 : https://www.nginx.com/blog/building-microservices-using-an-api-gateway/
