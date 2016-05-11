@@ -6,12 +6,12 @@
 원본 글 : https://www.nginx.com/blog/introduction-to-microservices/
 
 ## Building Monolithic Applications
-ex) Uber같은 taxi-haling app. [hexagonal architecture](http://www.infoq.com/news/2014/10/exploring-hexagonal-architecture) = Ports and Adapters architecture.
+아래는 Uber같은 taxi-haling app 아키텍쳐 다이어그램이다. [hexagonal architecture](http://www.infoq.com/news/2014/10/exploring-hexagonal-architecture) = Ports and Adapters architecture.
 ![](https://www.nginx.com/wp-content/uploads/2015/05/Graph-01-e1431978090737.png)
-단일체(monolith)이기 때문에 개발, 테스트, 패키징, 배포가 용이하다.
+논리적으로는 모듈형태이지만 단일(monolith) 애플리케이션으로 배포되기 때문에 개발, 테스트, 패키징, 배포 간편하고 쉬운 장점을 갖는다.
 
 ## Marching Towards Monolithic Hell
-애플리케이션이 거대해질 경우 심플한 Monolithic 구조에서는 아래의 문제가 발생한다.
+하지만 애플리케이션이 거대해질 경우 심플한 Monolithic 구조에서는 아래의 문제가 발생한다.
 
 * 생산성 - 수천개의 jars와 수백만 라인의 코드로 이루어진 beast 애플리케이션. Monolithic Hell. 복잡도가 증가하여 개발조직의 고통 시작, 배포시간도 오래걸림(수십분), 간단한 기능 추가에도 오래걸리는 배포 및 테스트로 인한 생산성 저하. CI에 역행. agile개발과 빠른 delivery의 어려움.
 * scale - CPU-intensive한 모듈과 in-memory 모듈이 함께 사용되는 경우처럼 리소스 요구사항이 상충될 때 확장성에 제약.
