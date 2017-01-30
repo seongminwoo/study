@@ -9,7 +9,7 @@ synchronous replication에 기반한 MySQL Multimaster Cluster.
 http://galeracluster.com/products/
 write set replication (wsrep) interface의 구현체.
 2007년 첫 릴리즈. open source.
-OpenStack에서도 사용 가이드 : http://docs.openstack.org/high-availability-guide/content/ha-aa-db-mysql-galera.html
+OpenStack에서도 사용. 가이드 : http://docs.openstack.org/high-availability-guide/content/ha-aa-db-mysql-galera.html
 * Synchronous replication => consistency.
 * Active-active multi-master topology => zero failover time.
 * Read and write to any cluster node
