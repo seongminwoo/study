@@ -9,5 +9,5 @@ https://slipp.net/wiki/display/java/Scala
 https://github.com/scalaz/scalaz
 https://github.com/twitter/finagle
 
-### onlie IDE
+### online IDE
 https://www.tutorialspoint.com/compile_scala_online.php
