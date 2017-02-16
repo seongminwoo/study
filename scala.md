@@ -8,3 +8,6 @@ https://slipp.net/wiki/display/java/Scala
 ### library
 https://github.com/scalaz/scalaz
 https://github.com/twitter/finagle
+
+### onlie IDE
+https://www.tutorialspoint.com/compile_scala_online.php
