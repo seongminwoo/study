@@ -9,6 +9,7 @@
 * http://www.scala-lang.org/docu/files/ScalaByExample.pdf
 * http://www.scala-lang.org/api/current/
 * http://docs.scala-lang.org/glossary/
+* http://docs.scala-lang.org/cheatsheets/
 
 ### library
 https://github.com/scalaz/scalaz
