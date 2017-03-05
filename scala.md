@@ -11,3 +11,6 @@ https://github.com/twitter/finagle
 
 ### online IDE
 https://www.tutorialspoint.com/compile_scala_online.php
+
+### online judge
+http://www.spoj.com/
