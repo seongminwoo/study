@@ -8,6 +8,7 @@
 * http://stackoverflow.com/tags/scala/info
 * http://www.scala-lang.org/docu/files/ScalaByExample.pdf
 * http://www.scala-lang.org/api/current/
+* http://docs.scala-lang.org/glossary/
 
 ### library
 https://github.com/scalaz/scalaz
