@@ -20,3 +20,6 @@ https://www.tutorialspoint.com/compile_scala_online.php
 
 ### online judge
 http://www.spoj.com/
+
+### video
+[Martin Odersky, "Working Hard to Keep It Simple" - OSCON Java 2011](https://www.youtube.com/watch?v=3jg1AheF4n0)
