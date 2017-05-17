@@ -2,21 +2,20 @@
 https://aws.amazon.com/ko/training/course-descriptions/architect/
 
 ### Course Outline
-This course will cover the following concepts on each day:
 
-Day 1
+#### Day 1
 * Core AWS Knowledge
 * Designing Your Environment
 * Making Your Environment Highly Available
 * Forklifting an Existing Application onto AWS
 
-Day 2
+#### Day 2
 * Event-Driven Scaling
 * Automating and Decoupling Your Infrastructure
 * Designing Storage at Scale
 * Hosting a New Web Application on AWS
 
-Day 3
+#### Day 3
 * The Four Pillars of the Well-Architected Framework
 * Disaster Recovery and Failover Strategies
 * Troubleshooting Your Environment
