@@ -27,3 +27,4 @@ https://aws.amazon.com/ko/training/course-descriptions/architect/
 https://www.aws.training/
 https://online.vitalsource.com
 https://cloudcraft.co/
+https://aws.amazon.com/ko/architecture/
