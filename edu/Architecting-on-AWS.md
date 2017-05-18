@@ -26,3 +26,4 @@ https://aws.amazon.com/ko/training/course-descriptions/architect/
 ## 레퍼런스
 https://www.aws.training/
 https://online.vitalsource.com
+https://cloudcraft.co/
