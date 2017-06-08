@@ -208,10 +208,10 @@ IDL tools : RAML and Swagger.
 
 ## Why Use Service Discovery?
 클라우드 환경에서의 microservices application은 auto-scaling, 장애, 업그레이드 등으로 인해 다이나믹하게 (IP주소가)변화한다.
-![](https://www.nginx.com/wp-content/uploads/2015/10/theproblemofdiscovery-1005x1024.png)
+![](https://cdn-1.wp.nginx.com/wp-content/uploads/2016/04/Richardson-microservices-part4-1_difficult-service-discovery.png)
 
 ### The Client-Side Discovery Pattern
-![](https://www.nginx.com/wp-content/uploads/2015/10/pattern_clientside-1024x967.png)
+![](https://cdn-1.wp.nginx.com/wp-content/uploads/2016/04/Richardson-microservices-part4-2_client-side-pattern.png)
 Netflix OSS( Netflix Eureka,  Netflix Ribbon)
 
 #### 장점
@@ -221,7 +221,7 @@ client knows about the available services instances, it can make intelligent, ap
 couples the client with the service registry.  You must implement client-side service discovery logic for each programming language and framework used by your service clients.
 
 ### The Server-Side Discovery Pattern
-![](https://www.nginx.com/wp-content/uploads/2015/10/pattern_serverside-1024x631.png)
+![](https://cdn-1.wp.nginx.com/wp-content/uploads/2016/04/Richardson-microservices-part4-3_server-side-pattern.png)
 AWS Elastic Load Balancer (ELB)
 * load balance external traffic from the Internet.
 * internal to a virtual private cloud (VPC)
@@ -249,7 +249,7 @@ Kubernetes, Marathon, and AWS의 경우 별도의 service registry가 존재하�
 
 ## Service Registration Options
 ### The Self-Registration Pattern
-![](https://www.nginx.com/wp-content/uploads/2015/10/pattern_selfregistration-1024x893.png)
+![](https://cdn-1.wp.nginx.com/wp-content/uploads/2016/04/Richardson-microservices-part4-4_self-registration-pattern.png)
 Netflix OSS Eureka client. Spring Cloud project.(@EnableEurekaClient annotation)
 
 #### 장점
@@ -259,7 +259,7 @@ relatively simple and doesn’t require any other system components.
 couples the service instances to the service registry. You must implement the registration code in each programming language and framework used by your services.
 
 ### The Third-Party Registration Pattern
-![](https://www.nginx.com/wp-content/uploads/2015/10/pattern_thirdparties-1024x593.png)
+![](https://cdn-1.wp.nginx.com/wp-content/uploads/2016/04/Richardson-microservices-part4-5_third-party-pattern.png)
 Registrator - etcd or Consul with docker
 
 NetflixOSS Prana - Netflix Eureka.
