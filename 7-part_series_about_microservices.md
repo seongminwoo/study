@@ -102,7 +102,7 @@ API Gateway 구현시 아래 디자인 이슈를 고려 해야한다.
 * Performance and Scalability
  * 성능을 위해 API Gateway는 비동기, 논블로킹 I/O를 지원하는 플랫폼으로 개발 필요. ex) Netty, Vertx, Spring Reactor, or JBoss Undertow, Node.js, NGINX
 
-* Using a Reactive Programming Model
+* Using a Reactive Programming Model(Future in Scala, CompletableFuture in Java 8, and Promise in JavaScript, Reactive Extensions)
  * simple yet efficient API Gateway code.
 
 * Service Invocation
