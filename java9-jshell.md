@@ -14,7 +14,6 @@ $ brew cask install java
 $ brew cask install java9-beta
 
 jenv 사용해서 java version 관리하기
-http://www.jenv.be/
 $ brew install jenv
 $ echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.bash_profile
 $ echo 'eval "$(jenv init -)"' >> ~/.bash_profile
