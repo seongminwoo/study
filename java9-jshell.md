@@ -31,11 +31,11 @@ $ jenv local oracle64-1.8.0.92
 ```
 
 ### reference
-http://www.jenv.be/
-http://davidcai.github.io/blog/posts/install-multiple-jdk-on-mac/
-https://crazysalaryman.wordpress.com/2015/03/14/jenv-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/
+* http://www.jenv.be/
+* http://davidcai.github.io/blog/posts/install-multiple-jdk-on-mac/
+* https://crazysalaryman.wordpress.com/2015/03/14/jenv-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/
 
 
 ## reference
-http://jakubdziworski.github.io/java/2016/07/31/jshell-getting-started-examples.html
-https://www.youtube.com/watch?v=8XmYT89fBKg
+* http://jakubdziworski.github.io/java/2016/07/31/jshell-getting-started-examples.html
+* https://www.youtube.com/watch?v=8XmYT89fBKg
