@@ -35,6 +35,21 @@ $ jenv local oracle64-1.8.0.92
 * http://davidcai.github.io/blog/posts/install-multiple-jdk-on-mac/
 * https://crazysalaryman.wordpress.com/2015/03/14/jenv-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/
 
+## 기억해둘만한 내용
+<img width="479" alt="2017-06-14 10 28 28" src="https://user-images.githubusercontent.com/1201462/27111972-dc56b9e0-50ee-11e7-95a7-0043c32884e4.png">
+
+<img width="533" alt="2017-06-14 10 31 27" src="https://user-images.githubusercontent.com/1201462/27111971-dc4ce136-50ee-11e7-8760-0fc0b7b55f42.png">
+
+<img width="523" alt="2017-06-14 10 37 46" src="https://user-images.githubusercontent.com/1201462/27111983-e9c7af30-50ee-11e7-8b5f-3845729e9ec3.png">
+
+<img width="405" alt="2017-06-14 10 38 39" src="https://user-images.githubusercontent.com/1201462/27111982-e9c2fdd2-50ee-11e7-98a3-08734e680454.png">
+
+<img width="482" alt="2017-06-14 10 42 50" src="https://user-images.githubusercontent.com/1201462/27111989-f29804f2-50ee-11e7-8acd-3010460c8b87.png">
+
+<img width="445" alt="2017-06-14 10 44 37" src="https://user-images.githubusercontent.com/1201462/27111992-f2b9c880-50ee-11e7-8671-aaba8d81a20c.png">
+
+<img width="454" alt="2017-06-14 10 44 52" src="https://user-images.githubusercontent.com/1201462/27111991-f2b8a054-50ee-11e7-9b95-b19180aafb0a.png">
+
 
 ## reference
 * http://jakubdziworski.github.io/java/2016/07/31/jshell-getting-started-examples.html
