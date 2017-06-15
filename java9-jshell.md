@@ -1,4 +1,4 @@
-## Java 9 interpreter(REPL)
+## Java 9 interpreter(REPL, Read Evaluate Print Loop)
 드디어 자바에도 REPL(레플)이!!
 프로젝트 생성없이 빠르게 코드 작성해서 테스트 및 실험 가능한 장점!!(quick feedback loop) 노클래스! 노메소드! 노컴파일!
 
