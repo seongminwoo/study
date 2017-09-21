@@ -41,8 +41,6 @@ $ jenv local oracle64-1.8.0.92
 
 <img width="479" alt="2017-06-14 10 28 28" src="https://user-images.githubusercontent.com/1201462/27111972-dc56b9e0-50ee-11e7-95a7-0043c32884e4.png">
 
-<img width="533" alt="2017-06-14 10 31 27" src="https://user-images.githubusercontent.com/1201462/27111971-dc4ce136-50ee-11e7-8760-0fc0b7b55f42.png">
-
 <img width="523" alt="2017-06-14 10 37 46" src="https://user-images.githubusercontent.com/1201462/27111983-e9c7af30-50ee-11e7-8b5f-3845729e9ec3.png">
 
 <img width="405" alt="2017-06-14 10 38 39" src="https://user-images.githubusercontent.com/1201462/27111982-e9c2fdd2-50ee-11e7-98a3-08734e680454.png">
