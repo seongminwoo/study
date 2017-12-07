@@ -12,17 +12,17 @@ $ brew update && brew cleanup && brew cask cleanup
 java 최신버전 설치하기(java9 출시되면서 아래 명령어로 java9 설치가능)
 $ brew cask install java
 
-~~1.9-beta 설치하기~~
+~~1.9-beta 설치하기 ~~
 ~~$ brew cask install java9-beta~~
 
-jenv 사용해서 java version 관리하기
+ 사용해서 java version 관리하기
 $ brew install jenv
 $ echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.bash_profile
 $ echo 'eval "$(jenv init -)"' >> ~/.bash_profile
 $ /usr/libexec/java_home -V
 $ jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home
 Or 
-$ jenny add $(/usr/libexec/java_home -v1.8)
+$ jenv add $(/usr/libexec/java_home -v1.8)
 $ jenv add /Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home
 Or
 $ jenny add $(/usr/libexec/java_home -v9)
