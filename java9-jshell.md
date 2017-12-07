@@ -4,14 +4,16 @@
 
 ## java9 설치 및 jenv로 멀티 자바 버전 관리
 ```
-brew, cask 업데이트
-$ brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup          
+brew, cask 없을 경우 설치
 
-java 최신버전 설치하기 
+brew, cask 업데이트
+$ brew update && brew cleanup && brew cask cleanup          
+
+java 최신버전 설치하기(java9 출시되면서 아래 명령어로 java9 설치가능)
 $ brew cask install java
 
-1.9-beta 설치하기
-$ brew cask install java9-beta
+~~1.9-beta 설치하기~~
+~~$ brew cask install java9-beta~~
 
 jenv 사용해서 java version 관리하기
 $ brew install jenv
